@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="Login_Form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <section>
+        <div class="login-form">
+            <form class="forgot">
+                <div class="input-group header-group">
+                    <h1>Welcome back</h1>
+                    <span>Welcome back! Please enter your details</span>
+                </div>
+                <div class="input-group email-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="email" id="email" placeholder="Enter your email">
+                    <span class="error"></span>
+                </div>
+                <div class="input-group password-group">
+                    <label for="password">password</label>
+                    <input type="password" name="password" class="password" id="password" placeholder="Enter your password">
+                    <span class="error"></span>
+                    <div id="info">
+                        <div class="pwd-info">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 28 28">
+                                <path fill="currentColor" d="M15 8a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm-1.75 3.75v7.5a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-1.5 0ZM2 14C2 7.373 7.373 2 14 2s12 5.373 12 12s-5.373 12-12 12S2 20.627 2 14ZM14 3.5C8.201 3.5 3.5 8.201 3.5 14S8.201 24.5 14 24.5S24.5 19.799 24.5 14S19.799 3.5 14 3.5Z"/>
+                            </svg>
+                            <div class="strong-pwd">
+                                <h4>Create strong passwords</h4>
+                                <ul>
+                                    <li>atleast 6 char</li>
+                                    <li>min 1 lowercase</li>
+                                    <li>min 1 uppercase</li>
+                                    <li>min 1 number</li>
+                                    <li>min 1 special char</li>
+                                </ul>
+                                 <div class="des"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group rem-for-group">
+                    <div class="rem-group">
+                        <input type="checkbox" name="remember" id="remember" class="remember">
+                        <label for="remember">Remember for 30 days</label>
+                        <a href="#" class="forgot" id="forgot">Forgot password</a>
+                    </div>
+                </div>
+                <div class="input-group signin-group">
+                    <input type="submit" class="signin" id="signin" value="Sign in">
+                    <span class="res">Logged in successfully</span>
+                </div>
+                <div class="input-group google-signin-group">
+                    <div class="google">
+                        <img src="google.png" class="google-img" id="google-img" alt="" >
+                        <span class="google-txt" id="google-txt">Sign in with Google</span>
+                    </div>
+                </div>
+                <div class="input-group signup-group">
+                    <span>Don't have an account? <a href="#">Sign up</a> </span>
+                </div>
+            </form>
+
+            <div class="result">
+                <i class=""></i>
+                <div class="res-group">
+                    <span class="result-msg"></span>
+                    <span class="error"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="side-logo">
+            <div class="circle"></div>
+            <div class="blur"></div>
+        </div>
+    </section>
+
+    <script src="Login_Form_Validation.js"></script>
+</body>
+</html>

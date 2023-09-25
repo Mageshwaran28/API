@@ -1,0 +1,327 @@
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+    background-color:#e6e6ff;
+}
+
+.login-form{
+    position: relative;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form form .input-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form form .input-group label{
+    margin-bottom: 8px;
+}
+
+.login-form form input{
+    height: 30px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 3px;
+    padding-left: 8px;
+}
+
+.login-form form input[type="email"]:focus,input[type="password"]:focus{
+    border-color: #4099ff;
+    outline: none;
+}
+
+
+.login-form form .rem-group{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-form form .rem-group label{
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.login-form form .rem-group a{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.login-form form input[type="checkbox"]{
+    margin: 0;
+}
+
+.login-form form input[type="submit"]{
+    font-size: medium;
+    background-color: blueviolet;
+    color: #fff;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+.login-form form h1{
+    margin-bottom:10px;
+}
+
+.login-form form .input-group.google-signin-group{
+    display: grid;
+    justify-content: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.login-form form .input-group.google-signin-group .google{
+    position: relative;
+    width: 180px;
+}
+
+.login-form form .input-group.google-signin-group .google .google-txt{
+    position: absolute;
+    margin-top: 6px; 
+    margin-left: 3px; 
+}
+
+
+.login-form form .input-group .google .google-img{
+    width: 30px;
+    height: 30px;
+}
+
+.login-form form .input-group.signup-group{
+    display: grid;
+    justify-content: center;
+}
+
+section .side-logo{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+section .side-logo .circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
+
+section .side-logo .blur{
+    position: absolute;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 150px;
+    top: 50%;
+}
+
+.result{
+    position: absolute;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    top: 10px;
+    right: 10px;
+    border: none;
+    padding: 5px 35px 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+
+.result.process{
+    background-color: #ffa64d;
+}
+
+.result i{
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.result.process i:hover{
+    background-color: #e67300;
+}
+
+
+.result .res-group{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    /* padding: 3px; */
+}
+
+.result.success .result-msg::before{
+    font-size: larger;
+    content: "Success";
+}
+
+.result.process .result-msg::before{
+    font-size: larger;
+    content: "Process";
+}
+
+.result.failure .result-msg::before{
+    font-size: larger;
+    content: "Failure";
+}
+
+.result .res-group .error{
+    font-size: x-small;
+}
+
+.result.process .res-group .error{
+    display: none;
+}
+
+.login-form form input[type="text"]{
+    position: relative !important;
+}
+
+.email-group .error,
+.password-group .error{
+    display: none;
+}
+
+.email-group.error input ,
+ .password-group.error input{
+    border-color: #ff5370 !important;
+ }
+
+.email-group.success input ,
+ .password-group.success input{
+    border-color: #00e600 !important;
+ }
+
+ .email-group.error .error ,
+ .password-group.error .error{
+    display: block;
+    font-size: x-small;
+    margin-top: 5px;
+    color: #ff5370;
+}
+
+.email-group ,
+.password-group
+{
+    height: 80px;
+}
+
+.signin-group{
+    height: 70px;
+}
+
+.login-form form .input-group.signin-group{
+    position: relative;
+}
+
+
+.login-form form .input-group.signin-group{
+    display: flex;    
+    gap: 10px;
+}
+.signin-group span{
+    display: none;
+    text-align: center;
+    color: #00e600;
+}
+
+.signin-group .res.error{
+    color: #ff5370;
+}
+
+.password-group{
+    position: relative;
+}
+
+ #info{
+    font-size: small;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: #000;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#info .pwd-info{
+    position: relative;
+}
+
+#info div svg{
+    color:  rgb(169, 92, 241);
+}
+
+#info  .pwd-info .strong-pwd {
+    display: none;
+    position: absolute;
+    right: -20px;
+    width: 150px;
+    top: -135px;
+    background-color: rgb(169, 92, 241);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#info .pwd-info .strong-pwd h4{
+    margin: 0;
+}
+
+#info .pwd-info .strong-pwd ul{
+    padding-left: 15px;
+}
+
+.des{
+    position: relative;
+    background-color: #00e600;
+  
+}
+
+.des::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    border-radius: 3px;
+    height: 15px;
+    background-color:  rgb(169, 92, 241);
+    right: 13px;
+    bottom: -10px;
+    transform: rotate(45deg);
+}
+
+#info:hover .strong-pwd{
+    display: block;
+}

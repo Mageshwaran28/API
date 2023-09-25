@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="add">
+      <input type="text" class="path" placeholder="Enter the image link or path" />
+      <input type="text" class="img-name" placeholder="Enter the name" />
+      <input type="text" class="img-desc" placeholder="Enter the description" />
+      <div class="btn">
+        <button onClick="addToggle()">Cancel</button>
+        <button onClick="add()">Add</button>
+      </div>
+    </div>
+    <div class="del-per">
+      <i class="fa-solid fa-exclamation"></i>
+      <h2>Delete Record</h2>
+      <span>Are you sure you want to delete this record ?</span>
+      <div class="del-id">45</div>
+      <div class="btn">
+        <button onClick="delCancel()">Cancel</button>
+        <button onClick="delSuccess()">Delete</button>
+      </div>
+    </div>
+    <div class="del-per-all">
+      <i class="fa-solid fa-exclamation"></i>
+      <h2>Delete All Record</h2>
+      <span>Are you sure you want to delete all this record ?</span>
+      <div class="btn">
+        <button onClick="delAllCancel()">Cancel</button>
+        <button onClick="delAllSuccess()">Delete All</button>
+      </div>
+    </div>
+    <header>
+      <div class="profile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          viewBox="0 0 256 256"
+        >
+          <path
+            fill="currentColor"
+            d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24ZM74.08 197.5a64 64 0 0 1 107.84 0a87.83 87.83 0 0 1-107.84 0ZM96 120a32 32 0 1 1 32 32a32 32 0 0 1-32-32Zm97.76 66.41a79.66 79.66 0 0 0-36.06-28.75a48 48 0 1 0-59.4 0a79.66 79.66 0 0 0-36.06 28.75a88 88 0 1 1 131.52 0Z"
+          />
+        </svg>
+        <div class="user-name">abc@gmail.com</div>
+      </div>
+      <div class="right">
+        <div class="search-group">
+          <input type="text" class="search-bar" placeholder="Search here " />
+        </div>
+        <div class="grid-table grid">
+          <div class="grid">Gridview</div>
+          <div class="table">Tableview</div>
+        </div>
+        <div class="add-del">
+          <div class="add-card">Add</div>
+          <div class="delete-all">DeleteAll</div>
+        </div>
+        <div class="count">
+          Total Visible :
+          <span class="total-update"></span>
+        </div>
+        <div class="signout">Sign-out</div>
+      </div>
+    </header>
+    <div class="head grid">
+      <div>Image</div>
+      <div>Name</div>
+      <div>Description</div>
+    </div>
+    <section></section>
+    <div class="no-data">No data found</div>
+    <script src="api.js"></script>
+  </body>
+</html>
